@@ -7,8 +7,8 @@ services:
     container_name: pihole-unbound
     image: willypapa/pihole-unbound:latest
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
+      - "${PIHOLE_ServerIP}:53:53/tcp"
+      - "${PIHOLE_ServerIP}:53:53/udp"
       - "67:67/udp"
       - "80:80/tcp"
       - "443:443/tcp"
@@ -21,8 +21,8 @@ services:
       DNSSEC: "true"
     # Volumes store your data between container upgrades
     volumes:
-      - ./etc-pihole/:/etc/pihole:rw
-      - ./etc-dnsmasq.d/:/etc/dnsmasq.d:rw
+      - ~/.pihole-unbound/etc-pihole/:/etc/pihole:rw
+      - ~/.pihole-unbound/etc-dnsmasq.d/:/etc/dnsmasq.d:rw
     # Recommended but not required (DHCP needs NET_ADMIN)
     #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
