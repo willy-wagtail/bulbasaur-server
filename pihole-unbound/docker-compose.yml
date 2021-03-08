@@ -5,7 +5,7 @@ services:
   pihole-unbound:
     build: .
     container_name: pihole-unbound
-    image: willypapa/pihole-unbound:latest
+    image: pihole-unbound:latest
     ports:
       - "${PIHOLE_ServerIP}:53:53/tcp"
       - "${PIHOLE_ServerIP}:53:53/udp"
