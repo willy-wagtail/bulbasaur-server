@@ -10,5 +10,9 @@ Whitelist (optional)
 - ``cd ~/Documents/pihole-whitelist/``  
 - ``sudo python3 ./scripts/whitelist.py --dir ~/.pihole-unbound/etc-pihole/ --docker``
 
+On your home network's router, change the default DNS server to point to the IP address of the pihole-unbound host.
+
+Verify that advert blocking works using this (ad-blocker test)[https://ads-blocker.com/testing/].
+
 Stop pihole-unbound docker container
 - ``docker-compose down``
