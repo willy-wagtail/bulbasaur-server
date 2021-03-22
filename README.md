@@ -4,7 +4,7 @@ This repo contains information about the setup of my home server called Bulbasau
 
 ## Perfect media server
 
-Following the instructions in (this media server guide)[https://perfectmediaserver.com/], I've pooled multiple drives into one mount point using mergerfs and exposed it to my local network using Samba.
+Following the instructions in [this media server guide](https://perfectmediaserver.com/), I've pooled multiple drives into one mount point using mergerfs and exposed it to my local network using Samba.
 
 ## Backing up phone with Syncthing
 
