@@ -18,6 +18,8 @@ Setup a password on the web UI
 - go to  ``<IP of host>:8384`` on another device on the local network
 - follow prompts to setup username and password
 
+From here, you can then configure Syncthing using the GUI or using the configuration file in ``~/.syncthing/config/config.xml``
+
 ## 2 Teardown
 
 Stop syncthing docker container
