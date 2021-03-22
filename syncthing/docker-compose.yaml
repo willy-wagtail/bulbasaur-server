@@ -1,0 +1,14 @@
+version: "3"
+
+# More info at https://github.com/syncthing/syncthing/blob/main/README-Docker.md
+services:
+  syncthing:
+    image: syncthing/syncthing:latest
+    ports:
+      - "8384:8384"
+      - "22000:22000/udp"
+      - "22000:22000/tcp"
+    volumes:
+      - ~/.syncthing/config:/var/syncthing/config
+      - ${ST_HOST_FOLDERS_PATH}:/var/syncthing/data
+    restart: unless-stopped
