@@ -14,6 +14,10 @@ Start syncthing docker container:
 - ``docker ps -a`` to get container id
 - ``docker logs <container_id>`` to check the startup logs
 
+Setup a password on the web UI
+- go to  ``<IP of host>:8384`` on another device on the local network
+- follow prompts to setup username and password
+
 ## 2 Teardown
 
 Stop syncthing docker container
