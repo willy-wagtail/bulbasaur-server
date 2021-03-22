@@ -8,7 +8,7 @@ Following the instructions in [this "Perfect Media Server" guide](https://perfec
 
 ## Backing up phone with Syncthing
 
-I use Syncthing to backup data on my phone. 
+(Syncthing)[https://syncthing.net/] is used to backup data on my phone. (This video)[https://www.youtube.com/watch?v=O5O4ajGWZz8] is a useful tutorial for setting it up.
 
 Syncthing has an Android app which I've downloaded and configured to send data from my phone's camera, downloads, screenshots and messsenging app's media directories when it's on my home WiFi *and* is charging. This means the data sync will happen once a day, usually overnight. 
 
@@ -16,18 +16,6 @@ Syncthing on the server is running as a Docker container and configured to sync 
 
 Additionally, because the purpose is for backup, the phone's data is configured to "Send Only", and the server is setup to "Recieve Only" (as opposed to "Send and Receive" if the device's files were truely sync'ed up). This ensures data only travels in one direction.
 
+## Pihole with Unbound DNS
 
-## Dump of notes
-
-https://ubuntu.com/tutorials/install-and-configure-samba#4-setting-up-user-accounts-and-connecting-to-share
-
-Permission issue with Samba: https://unix.stackexchange.com/questions/206309/how-to-create-a-samba-share-that-is-writable-from-windows-without-777-permission
-
-New hard disc drive burn-in script: https://github.com/Spearfoot/disk-burnin-and-testing
-
-TMUX cheatsheet: https://gist.github.com/MohamedAlaa/2961058
-
-Installing Syncthing bare metal on Ubuntu following instructions here https://syncthing.net/downloads/ and https://wiki.learnlinux.tv/index.php/Syncing_your_Files_Across_ALL_your_Computers_via_Syncthing#Add_systemd_unit and https://forum.manjaro.org/t/syncthing-systemd-service-will-not-start/54607/4
-
-
-
+The server is also running Pihole with Unbound DNS in a docker container. See the ``README.md`` in ``./pihole-unbound`` for more info 
