@@ -4,7 +4,7 @@
 
 Create environment variables referenced in the ``docker-compose.yml`` file:
 - ``sudo nano .env`` in same directory as ``docker-compose.yml``
-- add env vars to file
+- add the referenced env variables to the file, e.g.:
     ```
     PIHOLE_PASSWORD=<password Pihole for web UI>
     PIHOLE_TIMEZONE=Europe/London
