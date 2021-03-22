@@ -1,5 +1,13 @@
 # Pihole with Unbound DNS
 
+
+Create file with name ``.env`` in this directory with environment variables referenced in the ``docker-compose.yml`` - i.e.:
+```
+PIHOLE_PASSWORD=<password Pihole for web UI>
+PIHOLE_TIMEZONE=Europe/London
+PIHOLE_ServerIP=<local IP Address of host>
+```
+
 Build and start pihole-unbound docker container
 - ``docker-compose up -d`` 
 - ``docker ps -a`` to get container id
