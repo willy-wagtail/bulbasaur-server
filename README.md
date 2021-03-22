@@ -16,6 +16,10 @@ Syncthing on the server is running as a Docker container and configured to sync 
 
 Additionally, because the purpose is for backup, the phone's data is configured to "Send Only", and the server is setup to "Recieve Only" (as opposed to "Send and Receive" if the device's files were truely sync'ed up). This ensures data only travels in one direction.
 
+See the ``README.md`` in ``./syncthing`` for more info.
+
 ## Pihole with Unbound DNS
 
-The server is also running Pihole with Unbound DNS in a docker container. See the ``README.md`` in ``./pihole-unbound`` for more info 
+The server is also running Pihole with Unbound DNS in a docker container. 
+
+See the ``README.md`` in ``./pihole-unbound`` for more info. 
