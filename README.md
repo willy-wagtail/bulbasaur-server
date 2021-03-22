@@ -8,15 +8,13 @@ Following the instructions in the ["Perfect Media Server"](https://perfectmedias
 
 ## Backing up phone with Syncthing
 
-[Syncthing](https://syncthing.net/) is used to backup data on my phone. [This video](https://www.youtube.com/watch?v=O5O4ajGWZz8) is a useful tutorial for setting it up.
+[Syncthing](https://syncthing.net/) is used to backup data on my phone. [This video](https://www.youtube.com/watch?v=O5O4ajGWZz8) and [this video](https://www.youtube.com/watch?v=J1bCWv14zYg) are useful tutorials for setting it up bare metal. See my ``README.md`` in ``./syncthing`` for more info on how I run it in a docker container.
 
 Syncthing has an Android app which I've downloaded and configured to send data from my phone's camera, downloads, screenshots and messsenging app's media directories when it's on my home WiFi *and* is charging. This means the data sync will happen once a day, usually overnight. 
 
 Syncthing on the server is running as a Docker container and configured to sync files from my phone to my mergerfs mount point, specifically under ``/mnt/storage/Devices/Phone/...``. I've also configured it with Simple File Versioning, keeping 1 copy. This means that when the phone deletes files, the server would create a previous version of the file before deleting. This is useful as I can delete files on my phone to save memory and still have a copy in the server.
 
 Additionally, because the purpose is for backup, the phone's data is configured to "Send Only", and the server is setup to "Recieve Only" (as opposed to "Send and Receive" if the device's files were truely sync'ed up). This ensures data only travels in one direction.
-
-See the ``README.md`` in ``./syncthing`` for more info.
 
 ## Pihole with Unbound DNS
 
