@@ -29,3 +29,11 @@ Verify that advert blocking works using this [ad-blocker test](https://ads-block
 
 Stop pihole-unbound docker container
 - ``docker-compose down``
+
+## 3 Update
+
+Stop pihole-unbound docker container
+- ``docker-compose down``
+
+Start pihole-unbound docker container again, forcing it to build again by supplying flag.
+- ``docker-compose up --build -d``
