@@ -25,3 +25,16 @@ From here, you can then configure Syncthing using the GUI or using the configura
 Stop syncthing docker container
 - ``docker-compose down``
 
+## 3 Update 
+
+Stop syncthing docker container
+- ``docker-compose down``
+
+Update images
+- ``docker-compose pull``
+
+Prune old images
+- ``docker image prune``
+
+Start syncthing docker container
+- ``docker-compose up -d``
